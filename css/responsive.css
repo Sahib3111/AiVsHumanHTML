@@ -1,0 +1,253 @@
+/* ===================================
+   Responsive Design - Mobile First
+   =================================== */
+
+/* Large Tablets and Small Desktops (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    .hero-title {
+        font-size: var(--font-size-5xl);
+    }
+
+    .section-title {
+        font-size: var(--font-size-3xl);
+    }
+
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-large,
+    .card-medium,
+    .card-small {
+        grid-column: span 1;
+    }
+
+    .future-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+
+    .strengths-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablets (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    :root {
+        --container-padding: var(--space-4);
+    }
+
+    .hero {
+        padding: var(--space-16) var(--space-4);
+    }
+
+    .hero-title {
+        font-size: var(--font-size-4xl);
+    }
+
+    .hero-subtitle {
+        font-size: var(--font-size-lg);
+    }
+
+    .section-title {
+        font-size: var(--font-size-2xl);
+    }
+
+    .intro-text {
+        font-size: var(--font-size-base);
+        padding: var(--space-6);
+    }
+
+    .comparison-split {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+
+    .card {
+        padding: var(--space-6);
+    }
+
+    .card-title {
+        font-size: var(--font-size-xl);
+    }
+
+    .stat-comparison {
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+
+    .applications-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .competition-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile Devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .hero-title {
+        font-size: var(--font-size-3xl);
+        gap: var(--space-2);
+    }
+
+    .vs {
+        font-size: var(--font-size-2xl);
+    }
+
+    .hero-subtitle {
+        font-size: var(--font-size-base);
+    }
+
+    .section-title {
+        font-size: var(--font-size-xl);
+    }
+
+    .section-subtitle {
+        font-size: var(--font-size-base);
+    }
+
+    .intro-text {
+        font-size: var(--font-size-sm);
+        padding: var(--space-4);
+    }
+
+    .card {
+        padding: var(--space-4);
+    }
+
+    .card-icon {
+        font-size: var(--font-size-4xl);
+    }
+
+    .card-title {
+        font-size: var(--font-size-lg);
+    }
+
+    .comparison-item p {
+        font-size: var(--font-size-xs);
+    }
+
+    .stat-value {
+        font-size: var(--font-size-3xl);
+    }
+
+    .card-header {
+        height: 150px;
+    }
+
+    .strength-list li,
+    .limitation-list li {
+        font-size: var(--font-size-sm);
+    }
+
+    .app-card {
+        padding: var(--space-6);
+    }
+
+    .app-icon {
+        font-size: var(--font-size-4xl);
+    }
+
+    .future-text p {
+        font-size: var(--font-size-base);
+    }
+
+    .future-point {
+        padding: var(--space-4);
+    }
+
+    .point-icon {
+        font-size: var(--font-size-2xl);
+    }
+
+    .register-btn {
+        width: 100%;
+        padding: var(--space-3) var(--space-6);
+    }
+
+    .scroll-indicator {
+        bottom: var(--space-6);
+    }
+}
+
+/* Very Small Devices (max-width: 360px) */
+@media screen and (max-width: 360px) {
+    .hero-title {
+        font-size: var(--font-size-2xl);
+    }
+
+    .section-title {
+        font-size: var(--font-size-lg);
+    }
+
+    .bento-grid,
+    .applications-grid,
+    .competition-grid {
+        gap: var(--space-4);
+    }
+}
+
+/* Large Desktops (min-width: 1280px) */
+@media screen and (min-width: 1280px) {
+    .hero-title {
+        font-size: var(--font-size-7xl);
+    }
+
+    .section-title {
+        font-size: var(--font-size-5xl);
+    }
+
+    .bento-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card-large {
+        grid-column: span 2;
+    }
+
+    .applications-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Print Styles */
+@media print {
+
+    .particle-bg,
+    .scroll-progress,
+    .scroll-indicator,
+    .register-btn {
+        display: none;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .card,
+    .info-card,
+    .app-card {
+        break-inside: avoid;
+        border: 1px solid #ccc;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .scroll-indicator {
+        animation: none;
+    }
+}
